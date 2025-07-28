@@ -1,0 +1,75 @@
+
+*{
+    
+    /* margin: 0;
+    margin: 0; */
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+
+/* azul */
+.contenedor{
+    height: auto;
+    width: auto;
+    margin: 20%;
+    gap: 50px;
+    background-color: blue;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: nowrap;
+}
+
+
+.contenedor_cuadrados{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadrado{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+.contenedor_ciruculos{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.circulo{
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    border-radius: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+

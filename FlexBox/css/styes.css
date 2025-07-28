@@ -1,10 +1,7 @@
-
 *{
-    
-    /* margin: 0;
-    margin: 0; */
+    margin: 0;
+    margin: 0;
     box-sizing: border-box;
-
 }
 
 body{
@@ -20,8 +17,6 @@ body{
     flex-wrap: wrap;
 }
 
-
-/* azul */
 .contenedor{
     height: auto;
     width: auto;
@@ -36,7 +31,6 @@ body{
 
     flex-wrap: nowrap;
 }
-
 
 .contenedor_cuadrados{
     display: flex;
@@ -70,6 +64,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.peque{
+    width: 50px;
+    height: 50px;
 }
 
 

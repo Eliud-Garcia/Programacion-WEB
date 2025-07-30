@@ -20,7 +20,7 @@ body{
 .contenedor{
     height: auto;
     width: auto;
-    margin: 20%;
+    margin: 0 20%;
     gap: 50px;
     background-color: blue;
     display: flex;

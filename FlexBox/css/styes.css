@@ -48,7 +48,7 @@ body{
 
 .contenedor_ciruculos{
     width: 100%;
-    height: 200px;
+    height: auto;
 
     display: flex;
     flex-direction: row;
@@ -60,9 +60,9 @@ body{
 }
 
 .circulo{
-    width: 30%;
-    height: 75%;
+    width: 50%;
 
+    aspect-ratio: 1 / 1;
     background-color: yellow;
     border-radius: 100%;
 

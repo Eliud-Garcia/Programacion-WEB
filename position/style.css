@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+}
+
+/* lo importantes es el position stiky
+
+    incluye .nav-bar .bar y .link
+*/
+.nav-bar{
+    height: 40px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: black;
+}
+
+.bar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #F00;
+}
+
+main{
+    height: 700px;
+    padding: 10% 0;
+}
+
+#btn-fixed{
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: gray;
+    
+    position: fixed;
+    left: 85%;
+    top: 90%;
+    text-align: center;
+    
+    /* padding: 3% 0; */
+    text-decoration: none;
+    color: white;
+}
+
+
+
+footer > p{
+    text-align: center;
+}

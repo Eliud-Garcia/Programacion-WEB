@@ -41,14 +41,14 @@ header{
 
 main{
     height: 700px;
-    padding: 10% 0;
+    padding: 10% 10%;
 }
 
 #btn-fixed{
     width: 50px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: gray;
+    background-color: red;
     
     position: fixed;
     left: 85%;

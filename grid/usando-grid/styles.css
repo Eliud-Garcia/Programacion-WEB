@@ -46,3 +46,22 @@ footer{
     grid-area: footer;
     background-color: yellow;
 }
+
+/* usando media queries */
+
+/*  cuando el ancho sea menor a 480px 
+    se modifica el contenedor-grid
+*/
+@media (max-width: 480px) {    
+    #container{
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr;
+
+        /* 4 filas y 2 columnas */
+        grid-template-areas: 
+        "header header"
+        "section article"
+        "aside aside"
+        "footer footer";
+    }
+}

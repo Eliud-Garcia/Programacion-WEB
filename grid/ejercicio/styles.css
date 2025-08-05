@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+.container{
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 1f;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: 
+    "encabezado"
+    "navegacion"
+    "seccion-prod"
+    "seccion-ser"
+    "enlaces"
+    "pie-de-pagina"
+    ;
+}
+
+header{
+    grid-area: encabezado;
+    background-color: blue;
+}
+
+nav{
+    grid-area: navegacion;
+    background-color: aqua;
+}
+
+.seccion-prod{
+    grid-area: seccion-prod;
+    background-color: pink;
+}
+
+.seccion-ser{
+    grid-area: seccion-ser;
+    background-color: white;
+}
+
+aside{
+    grid-area: enlaces;
+    background-color: gold;
+}
+
+footer{
+    grid-area: pie-de-pagina;
+    background-color: blueviolet;
+}
+
+
+/* cuando el width es mayor a 480px */
+@media (min-width: 480px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        grid-template-areas: 
+        "encabezado encabezado encabezado navegacion"
+        "seccion-prod seccion-prod seccion-prod seccion-prod"
+        "seccion-ser seccion-ser seccion-ser seccion-ser"
+        "pie-de-pagina pie-de-pagina enlaces enlaces"
+        ;
+    }
+}
+
+
+@media (min-width: 1024px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        grid-template-areas: 
+        "encabezado encabezado encabezado navegacion"
+        "seccion-prod seccion-prod seccion-prod seccion-prod"
+        "seccion-ser seccion-ser seccion-ser seccion-ser"
+        "pie-de-pagina pie-de-pagina enlaces enlaces"
+        ;
+    }
+}

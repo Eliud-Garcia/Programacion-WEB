@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+/* En este caso se hizo 
+    Escritorio -> Tablet -> Movil
+    pero lo recomendable es 
+    Movil -> Tablet -> Escritorio
+*/
+
 .container-first{
     width: 100vw;
 
@@ -55,6 +61,8 @@ nav{
 }
 
 #btn__burger{
+    /* inicialmente está oculto */
+    /* debe aparecer cuando esté en tablet y movil */
     display: none;
 }
 
@@ -95,6 +103,53 @@ main{
     grid-area: B;
     background-color: #EFEEEC;
 }
+
+.service-grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+
+    padding: 3% 5%;
+    
+    grid-template-columns: 3fr 1fr 2fr;
+    grid-template-rows: 0.2fr 2.2fr;
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "contenido vacio imagen"
+    ;
+}
+
+.service-tittle{
+    grid-area: titulo;
+}
+
+.service-content{
+    grid-area: contenido;
+    padding-bottom: 5%;
+}
+
+.btn-show-more{
+    width: 30%;
+    height: 15%;
+    margin: 5% 0;
+    background-color: #726157;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+.img-space{
+    grid-area: imagen;
+    width: 100%;
+    height: 100%;
+    background-color: #7B9BC2;
+}
+
 .C{
     grid-area: C;
     background-color: #EAE5E2;
@@ -127,7 +182,6 @@ footer{
 
     #btn__burger{
         display: inline;
-        
     }
 
     main{
@@ -143,6 +197,39 @@ footer{
         border: 1px solid black;
         flex-wrap: wrap;
     }
+
+    .service-grid{
+        height: 100%;
+        width: 100%;
+        display: grid;
+
+        padding: 2%;
+        
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "vacio vacio"
+        "vacio imagen"
+        ;
+    }
+
+    .service-tittle{
+        grid-area: titulo;
+        display: none;
+    }
+
+    .service-content{
+        grid-area: contenido;
+        display: none;
+    }
+
+    .img-space{
+        grid-area: imagen;
+        width: 200px;
+        height: 100%;
+        background-color: #7B9BC2;
+    }
+
 }
 
 /* para celular */

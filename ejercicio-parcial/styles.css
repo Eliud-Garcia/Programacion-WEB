@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+header{
+    background-color: green;
+    height: 20%;
+}
+
+nav{
+    background-color: red;
+    height: 10%;
+}
+
+main{
+    background-color: yellow;
+    height: 100%;
+    
+    padding: 5%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+section{
+    background-color: green;
+    height:50%;
+    width: 100%;
+    padding: 2%;
+}
+
+article{
+    background-color: gray;
+    height: 45%;
+    margin: 2%;
+}
+
+aside{
+    background-color: aqua;
+    height: 5%;
+}
+
+footer{
+    background-color: violet;
+    height: 15%;
+}
+
+@media (min-width: 669px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-rows: 1fr 0.5fr 3fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "aside main main"
+        "footer footer footer"
+        ;
+    }
+
+    header{
+        grid-area: header;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cuadrado{
+        height: 50px;
+        width: 50px;
+        background-color: yellow;
+        border: 1px solid red;
+    }
+    nav{
+        grid-area: nav;
+        height: 100%;
+    }
+    aside{
+        grid-area: aside;
+        height: 100%;
+    }
+    main{
+        grid-area: main;
+        height: 100%;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    article{
+        height: 100%;
+        width: 100%;
+        background-color: gray;
+    }
+    footer{
+        grid-area: footer;
+        height: 100%;
+    }
+}

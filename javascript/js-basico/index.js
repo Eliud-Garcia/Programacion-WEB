@@ -39,5 +39,40 @@ function saludar(nombre){
 }
 
 const funcionFlecha = ()=>{console.log('usando funcion flecha')};
+const f1 = (x, y) =>{return x + y};
+const f2 = x => x + 5;
+
+//funciones de orden superior
+
+//la funcion forEach recibe otra funcion
+array.forEach( function (elemento) {
+    console.log(elemento);
+} );
+
+arrayObj = [
+    {id:1, name: "Eliud"},
+    {id:2, name: "Pedro"},
+    {id:3, name: "Pedro"},
+    {id:4, name: "Carlos"},
+];
+
+const array_ans = arrayObj.filter( (element) => {
+    return element.name == "Pedro";
+});
+
+console.log(array_ans);
 
 
+//JSON
+
+let persona = {
+    "nombre" : "Eliud",
+    "apellido" : "Garcia",
+    "edad": 20,
+    "direccion" : {
+        "calle" : "Calle 15",
+        "ciudad" : "Florencia",
+        "pais" : "Colombia"
+    }
+
+};

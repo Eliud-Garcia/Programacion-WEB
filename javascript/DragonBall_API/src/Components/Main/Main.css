@@ -1,0 +1,9 @@
+
+main{
+    background-color: #f4f4f4;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}

@@ -15,47 +15,39 @@ function App() {
   const [nombre, setNombre] = useState("Cargando...")
   const [imagen, setImagen] = useState("Cargando...")
   const [especie, setEspecie] = useState("Cargando...")
+  const [personajes, setPersonajes] = useState(null)
 
-  let personajes = [];
 
-  function setValores(data){
-    setNombre(data.name);
-    setImagen(data.image);
-    setEspecie(data.species);
-
-    let p = {id: data.id, name: data.name, img: data.image, specie: data.species};
-    personajes.push(p);
+  function setValores(data) {
+    setPersonajes(data.results)
   }
 
-  useEffect(()=>{
-    fetch("https://rickandmortyapi.com/api/character/2")
-    .then(response => response.json())
-    .then(data => {
-      setValores(data)
-    })
-    .catch(error => console.log(error))
-    
+  useEffect(() => {
+    fetch("https://rickandmortyapi.com/api/character")
+      .then(response => response.json())
+      .then(data => {
+        setValores(data)
+      })
+      .catch(error => console.log(error))
+
   }, [])
 
   return (
     <>
       <Header />
       <main>
-        <MyCard data={{ name: nombre, img: imagen, specie: especie}} />
-        <MyCard data={{ name: nombre, img: imagen, specie: especie}} />
-        <MyCard data={{ name: nombre, img: imagen, specie: especie}} />
-        
-
-        <MyAccordion data={{ title: "s" }} />
-        <MyAccordion data={{ title: "Carro" }} />
-        <MyAccordion data={{ title: "Carro" }} />
-        <MyAccordion data={{ title: "Carro" }} />
-
+        {
+          personajes != null ?
+            personajes.map((item) => (
+              <MyCard key={item.id} data={item} />
+            ))
+            : <p>cargando</p>
+        }        
       </main>
       <Footer />
 
     </>
-  )
+      )
 }
 
-export default App
+      export default App

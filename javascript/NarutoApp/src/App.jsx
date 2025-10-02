@@ -7,8 +7,7 @@ import Main from './Components/Main/Main'
 import Footer from './Components/Footer/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  //s
   return (
     <>
       <Header />
